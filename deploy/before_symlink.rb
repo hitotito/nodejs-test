@@ -1,2 +1,2 @@
 
-Chef::log.info("Custom deployment")
+Chef::Log.info("Custom deployment")
