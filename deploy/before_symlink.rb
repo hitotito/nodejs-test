@@ -1,3 +1,4 @@
+include_recipe "deploy"
 
 Chef::Log.info("Custom deployment")
 
@@ -6,5 +7,6 @@ execute "install bower" do
 end
 
 execute "install bower components" do
+	user deploy[:user]
 	command "./node_modules/bower/bin/bower install"
 end
