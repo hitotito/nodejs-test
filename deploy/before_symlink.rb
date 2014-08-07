@@ -4,8 +4,7 @@ execute "install bower" do
 	command "npm install -g bower"
 end
 
-# Chef::Log.info("")
-# execute "install bower components" do
-# 	user deploy[:user]
-# 	command "./node_modules/bower/bin/bower install"
-# end
+Chef::Log.info("Installing components")
+execute "install bower components" do
+	command "bower install"
+end
