@@ -1,5 +1,3 @@
-include_recipe "deploy"
-
 Chef::Log.info("Custom deployment")
 
 execute "install bower" do
