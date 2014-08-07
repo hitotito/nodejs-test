@@ -6,5 +6,6 @@ end
 
 Chef::Log.info("Installing components")
 execute "install bower components" do
+	user	"deploy"
 	command "bower install"
 end
