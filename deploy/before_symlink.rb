@@ -6,5 +6,5 @@ execute "install bower" do
 end
 
 execute "install bower components" do
-	command "./node_modules/.bin/bower install"
+	command "./node_modules/bower/bin/bower install"
 end
