@@ -1,4 +1,6 @@
 
 Chef::Log.info("Custom deployment")
 
-Chef::Log.info(`#{node[:deploy][application][:nodejs]}`)
+execute "install bower components" do
+	command "npm install -g bower && bower install"
+end
